@@ -139,11 +139,11 @@ resource "aws_instance" "terra-instance" {
 }
 
 
-resource "aws_instance" "sample-server" {
-  ami = "unknown"
-  instance_type = "unknown"
+# resource "aws_instance" "sample-server" {
+#   ami = "unknown"
+#   instance_type = "unknown"
   
-}
+# }
 
 # output "instance_public_ip" {
 #     description = "Public IP of EC2 instance"

@@ -30,8 +30,8 @@ variable "instance_type" {
 # }
 
 variable "my_env" {
-  description = "Prod"
-  default = "prod"
+  description = "dev"
+  default = "dev"
   type = string
   
 }
