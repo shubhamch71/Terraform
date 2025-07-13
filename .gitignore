@@ -1,0 +1,16 @@
+# Ignore all Terraform state files in all subdirectories
+**/*.tfstate
+**/*.tfstate.backup
+**/*.tfplan
+
+# Ignore all .terraform/ folders recursively
+**/.terraform/
+
+# Ignore any tfvars files
+**/*.tfvars
+
+**/*.lock.hcl
+
+**/*.pub
+
+**/id*
