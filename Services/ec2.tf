@@ -24,7 +24,7 @@ resource "aws_security_group" "my_terra_sg" {
     vpc_id = aws_vpc.my_terra_vpc.id
 
     tags = {
-      Name = "terra-sg"
+      Name = "${var.my_env}terra-sg"
     }
 
    ingress {
@@ -134,15 +134,16 @@ resource "aws_instance" "terra-instance" {
 
   tags = {
     Name = each.key
+    Environment = var.my_env
   }
 }
 
 
-resource "aws_instance" "sample-server" {
-  ami = "unknown"
-  instance_type = "unknown"
+# resource "aws_instance" "sample-server" {
+#   ami = "unknown"
+#   instance_type = "unknown"
   
-}
+# }
 
 # output "instance_public_ip" {
 #     description = "Public IP of EC2 instance"
