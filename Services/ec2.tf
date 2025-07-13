@@ -24,7 +24,7 @@ resource "aws_security_group" "my_terra_sg" {
     vpc_id = aws_vpc.my_terra_vpc.id
 
     tags = {
-      Name = "terra-sg"
+      Name = "${var.my_env}-terra-sg"
     }
 
    ingress {
@@ -134,6 +134,7 @@ resource "aws_instance" "terra-instance" {
 
   tags = {
     Name = each.key
+    Environment = var.my_env
   }
 }
 
